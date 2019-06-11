@@ -1,0 +1,14 @@
+extends ../template
+
+block variables
+	- var title = '404'
+
+block content
+	.notFound
+		img(src="assets/images/404.jpg", alt="")
+		.notFound-content
+			h1.notFound-content__title 404
+			.notFound-content__subtitle Упс... Такой страницы не существует.
+			.notFound-content__text Проверьте написание адреса — может быть, вы просто ошиблись при наборе. А может быть, этой страницы уже нет.
+			.notFound-content-btn
+				a.notFound-content-btn__link(href="#") Перейти в каталог

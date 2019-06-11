@@ -1,0 +1,26 @@
+.main-form
+	.main-form__title Связаться с нами
+	.main-form-content
+		.main-form-content-left
+			img(src="assets/images/main-form.png", alt="")
+			// на странице "о компании" вставить карту из конструктора яндекс с правильным адресом 
+			.main-form-content-left-wrap
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A516fc6783b4d070e7a74960e0293c5bc4970deec3a4c0555279ae9c8f101c47a&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+		form.main-form-content-right(action="#")
+			.main-form-content-right__title Отправьте заявку и мы свяжимся с Вами
+			.main-form-content-right-pair
+				label(for="name") Имя
+				input(type="text" placeholder="Иван Иванов" name="name" data-required)
+			.main-form-content-right-tabs
+				.main-form-content-right-tabs-navigation
+					a(href="#inputTel")
+						label(for="tel") Телефон
+					a(href="#inputEmail")
+						label(for="email") E-mail
+				.main-form-content-right-tabs-tab#inputTel
+					input(type="tel" placeholder="+7 (900) 000-00-00" name="tel")
+				.main-form-content-right-tabs-tab#inputEmail
+					input(type="text" placeholder="ivanov@abc.ru" name="email")
+			span Отправляя форму Вы соглашаетесь <a href="#">на обработку данных</a>
+			.main-form-content-right-btn
+				button.main-form-content-right-btn__link(type='submit') Отправить

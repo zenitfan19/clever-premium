@@ -1,0 +1,19 @@
+extends ../template
+
+block variables
+	- var title = 'Карта'
+
+block content
+	.sait-map
+		nav.sait-map-menu
+			a.sait-map-menu__item(href="index.html") Главная
+			a.sait-map-menu__item(href="house.html") Страница дома
+			a.sait-map-menu__item(href="news.html") Новости
+			a.sait-map-menu__item(href="pagenews.html") Статья
+			a.sait-map-menu__item(href="about.html") О компании
+			a.sait-map-menu__item(href="catalog.html") Каталог
+			a.sait-map-menu__item(href="fav.html") Избранное
+			a.sait-map-menu__item(href="text.html") Текстовая страница
+			a.sait-map-menu__item(href="404.html") 404
+			a.sait-map-menu__item(href="505.html") 505
+			a.sait-map-menu__item(data-fancybox="" data-options='{"src": "#popup-form", "touch": false}' href="javascript:;") Попап

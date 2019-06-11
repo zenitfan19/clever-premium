@@ -1,0 +1,13 @@
+form.popup-form#popup-form(action="#" style="display: none;")
+	.popup-form__title Связаться с нами
+	.popup-form__text Пожалуйста, заполните форму, и мы свяжемся с вами в самое ближайшее время.
+	.popup-form-pair
+		label(for="name") Имя
+		input(type="text" name="name" placeholder="Иван Иванов" data-required)
+	.popup-form-pair
+		label(for="name") Телефон
+		input(type="tel" name="tel" placeholder="+7 (999) 999-99-99")
+	.popup-form-bot
+		button.popup-form-bot__btn(type='submit') Отправить заявку
+		a.popup-form-bot__text(href="#") Соглашение о конфеденциальности
+		

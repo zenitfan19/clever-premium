@@ -1,0 +1,218 @@
+.about{
+	font-family: 'Roboto Condensed', sans-serif;
+	&__subtitle{
+		max-width: 1160px;
+		margin: 0 auto;
+		font-weight: 300;
+		font-size: 14px;
+		text-transform: uppercase;
+		@include pad(bottom, red);
+	}
+	&__title{
+		max-width: 1160px;
+		margin: 0 auto;
+		text-transform: uppercase;
+		font-size: 36px;
+		font-weight: normal;
+		position: relative;
+		@include pad(bottom, grey);
+		
+		&:before{
+			content: '';
+			width: 39px;
+			height: 3px;
+			background: #D9C892;
+			position: absolute;
+			left: -60px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__banner{
+		height: 505px;
+		overflow: hidden;
+		@include pad(bottom, cyan);
+		img{
+			width: 100%;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&-content{
+		width: 610px;
+		margin: 0 auto 80px;
+		&__subtitle{
+			font-size: 36px;
+			line-height: 42px;
+			text-align: center;
+			text-transform: uppercase;
+			@include pad(bottom, purple);
+		}
+		& > svg{
+			display: block;
+			margin: 0 auto;
+			@include pad(bottom, grey);
+		}
+		&__text{
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 37px;
+			letter-spacing: 0.02em;
+			@include pad(bottom, grey);
+		}
+		&-links{
+			margin: 0 -10px;
+			display: flex;
+			flex-wrap: wrap;
+			&__item{
+				width: calc(50% - 20px);
+				height: 42px;
+				margin: 0 10px 20px;
+				border: 2px solid #D9B02E;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 14px;
+				text-transform: uppercase;
+				@media screen and (min-width: 1200px){
+					&:hover{
+						background: rgba(217, 176, 46, 0.3);
+					}
+				}
+			}
+		}
+	}
+}
+
+@include w1024{
+	.about{
+		&__title{
+			padding-left: 60px;
+			font-size: 30px;
+			margin-bottom: 20px;
+			&:before{
+				left: 20px;
+				width: 30px;
+				height: 2px;
+				top: 17px;
+			}
+		}
+		&__subtitle{
+			padding-left: 20px;
+		}
+		&__banner{
+			margin-bottom: 40px;
+		}
+		&-content{
+			margin: 0 auto 20px;
+			&__subtitle{
+				font-size: 30px;
+				line-height: 32px;
+				margin-bottom: 20px;
+			}
+			> svg{
+				margin-bottom: 20px;
+			}
+			&__text{
+				font-size: 16px;
+				line-height: 33px;
+			}
+		}
+	}
+}
+
+@include w768{
+	.about{
+		&__title{
+			padding-left: 50px;
+			font-size: 24px;
+			margin-bottom: 20px;
+			padding-right: 20px;
+			&:before{
+				width: 21px;
+				top: 13px;
+			}
+		}
+		&__banner{
+			height: 300px;
+		}
+		&-content{
+			&__subtitle{
+				font-size: 24px;
+				line-height: 28px;
+			}
+			&__text{
+				font-size: 14px;
+				line-height: 29px;
+			}
+			&-links{
+				&__item{
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+
+@include w480{
+	.about{
+		&__title{
+			padding-left: 20px;
+			font-size: 18px;
+			&:before{
+				display: none;
+			}
+		}
+		&__banner{
+			height: 120px;
+			margin-bottom: 20px;
+		}
+		&-content{
+			width: 100%;
+			padding: 0 20px;
+			&__subtitle{
+				font-size: 19px;
+				line-height: 22px;
+				margin-bottom: 10px;
+			}
+			> svg{
+				margin-bottom: 10px;
+			}
+			&__text{
+				margin-bottom: 20px;
+			}
+			&-links{
+				&__item{
+					font-size: 14px;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@include w320{
+	.about{
+		&__title{
+			padding-left: 10px;
+			font-size: 14px;
+		}
+		&__subtitle{
+			font-size: 10px;
+			padding-left: 10px;
+		}
+		&-content{
+			padding: 0 10px;
+			&__subtitle{
+				font-size: 14px;
+				line-height: 16px;
+			}
+			&__text{
+				font-size: 12px;
+				line-height: 25px;
+			}
+		}
+	}
+}

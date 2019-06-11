@@ -1,0 +1,13 @@
+.fav{
+	&__title{
+		margin-bottom: 30px;
+	}
+}
+
+@include w768{
+	.fav{
+		&__title{
+			margin-bottom: 20px;
+		}
+	}
+}

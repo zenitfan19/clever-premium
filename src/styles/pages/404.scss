@@ -1,0 +1,142 @@
+.notFound{
+	position: relative;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-top: -100px;
+	img{
+		width: 100%;
+		height: auto;
+	}
+	&-content{
+		position: absolute;
+		top: calc(50% + 50px);
+		transform: translateY(-50%);
+		max-width: 380px;
+		right: 20%;
+		&__title{
+			font-size: 207px;
+			line-height: 153px;
+			font-weight: normal;
+			margin: 0;
+			margin-bottom: 60px;
+			color: #181818;
+		}
+		&__subtitle{
+			font-size: 24px;
+			line-height: 28px;
+			margin-bottom: 20px;
+		}
+		&__text{
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 16px;
+			color: rgba(0, 0, 0, 0.8);
+			margin-bottom: 30px;
+		}
+		&-btn{
+			&__link{
+				width: 180px;
+				height: 40px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 14px;
+				line-height: 16px;
+				color: #1B1B24;
+				background: #E2C773;
+				transition: 0.3s;
+			}
+			@media screen and (min-width: 1200px){
+				&:hover .notFound-content-btn__link{
+					transform: translateY(-3px);
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				}
+				&:active .notFound-content-btn__link{
+					transform: translateY(0);
+					box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+				}
+			}
+		}
+	}
+}
+
+@include w1024{
+	.notFound{
+		&-content{
+			right: 10%;
+			&__title{
+				font-size: 167px;
+				line-height: 123px;
+				margin-bottom: 40px;
+			}
+			&__subtitle{
+				font-size: 21px;
+				line-height: 18px;
+			}
+			&__text{
+				font-weight: 300;
+				font-size: 14px;
+
+			}
+		}
+	}
+}
+
+@include w768{
+	.notFound{
+		&-content{
+			max-width: 360px;
+			right: 2%;
+			&__title{
+				font-size: 127px;
+				line-height: 93px;
+				margin-bottom: 20px;
+			}
+			&__subtitle{
+				font-size: 18px;
+			}
+			&__text{
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@include w480{
+	.notFound{
+		margin-top: 0;
+		img{
+			display: none;
+		}
+		&-content{
+			position: relative;
+			right: auto;
+			top: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-top: 40px;
+			margin-bottom: 50px;
+			&__title{
+				font-size: 180px;
+				line-height: 130px;
+				margin-bottom: 50px;
+				text-align: center;
+			}
+			&__subtitle{
+				font-size: 18px;
+				line-height: 21px;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+			&__text{
+				font-weight: 300;
+				font-size: 12px;
+				line-height: 14px;
+				color: rgba(0, 0, 0, 0.8);
+				text-align: center;
+			}
+		}
+	}
+}
